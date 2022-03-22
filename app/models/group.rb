@@ -1,6 +1,21 @@
 class Group < ApplicationRecord
-  belongs_to :user, class_name: 'User', foreign_key: 'author_id'
-  has_many :relations, class_name: 'Relation', foreign_key: 'group_id'
+  belongs_to :user
+  has_many :relations, dependent: :destroy
 
   validates :icon, presence: true
+
+  def created_at
+    attributes['created_at'].strftime("%d %b %Y")
+  end
+
+  def self.total(id)
+    group = Group.find(id)
+    relations = group.relations
+    @total = 0
+    relations.each do |relation|
+      entity = Entity.find(relation.entity_id)
+      @total += entity.amount
+    end
+    @total
+  end
 end

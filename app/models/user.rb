@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :trackable, :confirmable
-  has_many :groups, class_name: 'Group', foreign_key: 'author_id'
-  has_many :entities, class_name: 'Entity', foreign_key: 'author_id'
+  has_many :groups, dependent: :destroy
+  has_many :entities, dependent: :destroy
 
   validates :name, presence: true
 end
