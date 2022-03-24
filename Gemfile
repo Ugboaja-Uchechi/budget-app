@@ -7,6 +7,8 @@ gem 'devise'
 
 gem "font-awesome-rails"
 
+gem 'ffi'
+
 ruby '2.7.5'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
