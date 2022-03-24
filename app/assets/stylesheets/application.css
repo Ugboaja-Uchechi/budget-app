@@ -17,3 +17,15 @@ nav {
   background-color: hsl(206deg 100% 73%);
   margin-top: 0;
 }
+
+.body-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border: 2px solid black;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  height: 5rem;
+}

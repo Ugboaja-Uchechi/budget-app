@@ -8,7 +8,7 @@
 
 <section>
     <%@groups.each do |group|%>
-      <div>
+      <div class = "body-flex">
         <img src=<%=group.icon%> alt="icon">
 
         <%= link_to group_path(group.id), :remote => true do %>

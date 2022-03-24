@@ -5,6 +5,7 @@
 
 <%@relations.each do |relation|%>
   <%entity = Entity.find(relation.entity_id)%>
+  <div class = "body-flex">
   <img src=<%=@group.icon%> alt="icon">
 
   <h3><%=entity.name%></h3>
@@ -14,11 +15,10 @@
   <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete %>
 <%end%>
 
-
+</div>
 <%= link_to new_entity_path, :remote => true do %>
   <input type="button" value="Add transaction">
 <% end %>
-
 <br>
 
 <%= link_to groups_path, :remote => true do %>
