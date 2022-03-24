@@ -1,22 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe Group, type: :model do
+RSpec.describe Entity, type: :model do
   before(:each) do
-    @user1 = User.create! name: 'Rav', password: 'qwertyasdf', email: 'melodie@mail.com'
-    @group = @user1.groups.create! name: 'Sleep', icon: 'icon'
+    @user1 = User.create! name: 'Justin', password: '000000', email: 'justin@gmail.com'
+    @entity = @user1.entities.create! name: 'Stranger Things', amount: 1000
   end
 
   it 'name should be present' do
-    @group.name = 'Sleep'
-    expect(@group.name).to eq('Sleep')
+    @entity.name = nil
+    expect(@entity).to_not be_valid
   end
 
-  it 'icon should be present' do
-    @group.icon = nil
-    expect(@group).to_not be_valid
+  it 'amount should be present and greater than 0' do
+    @entity.amount = 0
+    expect(@entity).to_not be_valid
   end
 
   it 'subject should be valid' do
-    expect(@group).to be_valid
+    expect(@entity).to be_valid
   end
 end
