@@ -8,6 +8,10 @@ In this project, I created a budget website in which users can track their finan
 
 ## Screenshots
 
+![image](https://user-images.githubusercontent.com/74814780/159991267-1dcae1b2-f4a4-4837-be7a-dc4877926c5b.png)
+
+![image](https://user-images.githubusercontent.com/74814780/159991298-b0889634-e711-4676-89e0-fc7f0d271367.png)
+
 [Presentation Video](https://www.loom.com/share/28511a885c3f48cea466eecce85126f5)
 
 ## Built with
