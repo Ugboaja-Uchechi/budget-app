@@ -14,7 +14,7 @@ class Group < ApplicationRecord
     @total = 0
     relations.each do |relation|
       entity = Entity.find(relation.entity_id)
-      @total += entity.amount
+      @total += entity.amount.to_i
     end
     @total
   end

@@ -16,7 +16,11 @@
         <%end%>
 
         <p><%=group.created_at%></p>
-          <h3>$<%=Group.total(group.id)%>.00</h3>
+          <%
+=begin%>
+ <h3>$<%=Group.total(group.id)%>.00</h3> 
+<%
+=end%>
           <%= button_to "Delete", group_path(group.id), html: {'data-turbo' => "false"}, :method => :delete %>
       </div>
     <%end%>

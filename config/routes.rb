@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     authenticated  do
-      root to: 'group#index'
+      root to: 'groups#index'
    end
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :entities, only: [:new, :create, :destroy] do
     resources :relations, only: [:create]
   end
-    resources :group, only: [:index, :show, :new, :create, :destroy]
+    resources :groups, only: [:index, :show, :new, :create, :destroy]
   # root "home#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
