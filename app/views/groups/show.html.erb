@@ -1,0 +1,29 @@
+<%= render "partials/nav" %>
+<div class="button-flex gift">
+  <h1 class="coupons">Gift Coupons</h1>
+  <h3 class="coupons">$<%=Group.total(@group.id)%>.00</h3>
+</div>
+
+<%@relations.each do |relation|%>
+  <%entity = Entity.find(relation.entity_id)%>
+  <div class = "body-flex">
+  <img src=<%=@group.icon%> alt="icon">
+
+  <h3><%=entity.name%></h3>
+  <p><%=entity.created_at%></p>
+
+  <h3>$<%=entity.amount%>.00</h3>
+  <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete %>
+<%end%>
+
+</div>
+<div class="button-flex">
+<%= link_to new_entity_path, :remote => true do %>
+  <input type="button" value="Add transaction">
+<% end %>
+<br>
+
+<%= link_to groups_path, :remote => true do %>
+  <input type="button" value="Back">
+<% end %>
+</div>
