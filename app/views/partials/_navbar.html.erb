@@ -6,19 +6,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
 
     <nav>
-
-      <i class="fa fa-arrows fa-lg" style="color:black"></i>
-
-      <a href="/group">Categories</a>
+      <h1>Categories</h1>
 
       <%= link_to destroy_user_session_path, method: :get do %>
-        <i class="fa fa-sign-out fa-lg" style="color:black" ></i>
+        <i class="fa fa-arrow-right fa-lg" style="color:black" ></i>
       <% end %>
 
    </nav>

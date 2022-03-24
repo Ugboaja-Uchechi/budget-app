@@ -6,25 +6,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-
     <nav>
-
-       <%= link_to groups_path, :remote => true do %>
+      <%= link_to groups_path, :remote => true do %>
         <i class="fa fa-arrow-left fa-lg" style="color:white"></i>
       <%end%>
-
-      <a href="/group">Transactions</a>
-
+      <a href="/groups">Transactions</a>
       <%= link_to destroy_user_session_path, method: :get do %>
-        <i class="fa fa-sign-out fa-lg" ></i>
+        <i class="fa fa-arrow-right fa-lg" ></i>
       <% end %>
-
-   </nav>
-
-
+    </nav>
   </body>
 </html>
