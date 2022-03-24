@@ -32,4 +32,4 @@ RSpec.describe 'Login', type: :feature do
       expect(current_path).to have_content('/')
     end
   end
-end 
+end
