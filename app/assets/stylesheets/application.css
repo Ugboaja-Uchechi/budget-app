@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
- margin: 0;
- background-color:  #efefef;
- font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #efefef;
+  font-family: 'Roboto', sans-serif;
 }
 
 .notice {
@@ -40,7 +40,8 @@ nav {
   border-radius: 5px;
 }
 
-input[type = button], button {
+input[type=button],
+button {
   width: 10rem;
   height: 3rem;
   background-color: #5fb523;
@@ -69,5 +70,5 @@ input[type = button], button {
 
 a {
   text-decoration: none;
-  color:  #989DA3;
+  color: #989da3;
 }
