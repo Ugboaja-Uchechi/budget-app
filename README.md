@@ -8,6 +8,8 @@ In this project, I created a budget website in which users can track their finan
 
 ## Screenshots
 
+[Presentation Video](https://www.loom.com/share/28511a885c3f48cea466eecce85126f5)
+
 ## Built with
 
 - Rails
