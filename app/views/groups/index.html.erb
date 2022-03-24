@@ -1,0 +1,25 @@
+<%= render "partials/navbar" %>
+
+<section>
+    <%@groups.each do |group|%>
+      <div class = "body-flex">
+        <img src=<%=group.icon%> alt="icon">
+
+        <%= link_to group_path(group.id), :remote => true do %>
+          <h3><%=group.name%></h3>
+        <%end%>
+
+        <p><%=group.created_at%></p>
+
+ <h3>$<%=Group.total(group.id)%>.00</h3> 
+
+          <%= button_to "Delete", group_path(group.id), html: {'data-turbo' => "false"}, :method => :delete %>
+      </div>
+    <%end%>
+</section>
+
+<div>
+  <%= link_to new_group_path,  :remote => true do %>
+    <input type="button" value="Add Category">
+  <% end %>
+</div>
