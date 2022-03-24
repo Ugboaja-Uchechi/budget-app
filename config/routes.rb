@@ -6,10 +6,6 @@ Rails.application.routes.draw do
     authenticated  do
       root to: 'group#index'
    end
-
-  unauthenticated do
-      root to: 'home#index', as: 'unauthenticated_root'
-  end
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   resources :home, only: [:index]
