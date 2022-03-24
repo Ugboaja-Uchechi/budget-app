@@ -14,9 +14,9 @@
 
   <h3>$<%=entity.amount%>.00</h3>
   <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete %>
+  </div>
 <%end%>
 
-</div>
 <div class="button-flex">
 <%= link_to new_entity_path, :remote => true do %>
   <input type="button" value="Add transaction">

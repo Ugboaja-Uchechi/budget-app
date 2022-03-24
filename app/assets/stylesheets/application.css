@@ -64,7 +64,7 @@ input[type = button], button {
 }
 
 .coupons {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 a {
