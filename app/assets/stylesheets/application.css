@@ -72,3 +72,8 @@ a {
   text-decoration: none;
   color: #989da3;
 }
+
+img {
+  width: 11rem;
+  height: 8rem;
+}

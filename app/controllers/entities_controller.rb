@@ -1,9 +1,4 @@
 class EntitiesController < ApplicationController
-  # def index
-  #   @group = Group.find(params[:group_id])
-  #   @relations = @group.relations
-  # end
-
   def new
     @entity = current_user.entities.new
     @relation = Relation.new(entity: @entity)
