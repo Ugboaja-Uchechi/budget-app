@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
  margin: 0;
  background-color:  #efefef;
+ font-family: 'Roboto', sans-serif;
 }
 
 .notice {
@@ -58,6 +61,10 @@ input[type = button], button {
 .gift {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.coupons {
+  margin-bottom: 0;
 }
 
 a {

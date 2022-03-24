@@ -1,7 +1,7 @@
 <%= render "partials/nav" %>
 <div class="button-flex gift">
-  <h1>Gift Coupons</h1>
-  <h3>$<%=Group.total(@group.id)%>.00</h3>
+  <h1 class="coupons">Gift Coupons</h1>
+  <h3 class="coupons">$<%=Group.total(@group.id)%>.00</h3>
 </div>
 
 <%@relations.each do |relation|%>
