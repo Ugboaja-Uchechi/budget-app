@@ -1,4 +1,4 @@
-class RelationController < ActionController::Base
+class RelationsController < ActionController::Base
   def new
     @group = Group.all
     @entity = current_user.entities.new
