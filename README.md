@@ -12,8 +12,6 @@ In this project, I created a budget website in which users can track their finan
 
 ![image](https://user-images.githubusercontent.com/74814780/159991298-b0889634-e711-4676-89e0-fc7f0d271367.png)
 
-[Presentation Video](https://www.loom.com/share/28511a885c3f48cea466eecce85126f5)
-
 ## Built with
 
 - Rails
@@ -25,7 +23,9 @@ In this project, I created a budget website in which users can track their finan
 - Linters(Rubocop and Stylelint)
 
 ## Live Link
-[Demo link](http://127.0.0.1:3000/users/sign_up)
+[Demo Link](http://127.0.0.1:3000/users/sign_up)
+
+[Presentation Video](https://www.loom.com/share/b04c99be722645e9a9621f127753e7b4)
 
 ## Setup
 
