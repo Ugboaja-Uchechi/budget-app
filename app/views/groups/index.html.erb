@@ -8,14 +8,14 @@
         </div>
         <div class="name-cover">
           <%= link_to group_path(group.id), :remote => true do %>
-            <h3><%=group.name%></h3>
+            <h3 class="group-name"><%=group.name%></h3>
           <%end%>
         </div>
         <div>
-          <h3>$<%=Group.total(group.id)%>.00</h3> 
+          <h3 class="group-cover">$<%=Group.total(group.id)%>.00</h3> 
         </div>
         <div>
-          <p><%=group.created_at%></p>
+          <p class="group-cover"><%=group.created_at%></p>
         </div>
         <div class="button-cover">
           <%= button_to "Delete", group_path(group.id), html: {'data-turbo' => "false"}, :method => :delete %>
@@ -24,7 +24,7 @@
     <%end%>
 </section>
 
-<div>
+<div id="add-category-cover">
   <%= link_to new_group_path,  :remote => true do %>
     <input type="button" value="Add Category">
   <% end %>

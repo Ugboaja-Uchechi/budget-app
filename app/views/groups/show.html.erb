@@ -7,19 +7,20 @@
 <%@relations.each do |relation|%>
   <%entity = Entity.find(relation.entity_id)%>
   <div class = "body-flex">
-  <img src=<%=@group.icon%> alt="icon">
+    <img src=<%=@group.icon%> alt="icon">
 
-  <h3><%=entity.name%></h3>
-  <p><%=entity.created_at%></p>
-
-  <h3>$<%=entity.amount%>.00</h3>
-  <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete %>
+    <h3 class="group-name"><%=entity.name%></h3>
+    <h3 class="group-cover">$<%=entity.amount%>.00</h3>
+    <p class="group-cover"><%=entity.created_at%></p>
+    <div class="button-cover">
+      <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete %>
+    </div>
   </div>
 <%end%>
 
 <div class="button-flex">
 <%= link_to new_entity_path, :remote => true do %>
-  <input type="button" value="Add transaction">
+  <input type="button" id="btn" value="Add transaction">
 <% end %>
 <br>
 
