@@ -14,23 +14,27 @@
       <div>
 
         <h1>Add A New Category</h1>
-        <%= form_with html: {'data-turbo' => "false"}, model: @group do |f| %>
+        <%= form_with html: {'data-turbo' => "false"}, class: "new_user", model: @group do |f| %>
 
-        <div>
-          <%= f.label :name %>
-          <%= f.text_field :name, required: true %>
-        </div>
+          <div class="field">
+            <%= f.label :name %>
+            <br />
+            <%= f.text_field :name, class: "input", required: true %>
+          </div>
 
-        <div>
-          <%= f.label "add icon or image" %>
-          <%= f.text_field :icon, required: true %>
-        </div>
+          <div class="field">
+            <%= f.label "add icon or image" %>
+            <br />
+            <%= f.text_field :icon, class: "input", required: true %>
+          </div>
 
-        <div>
-          <%= f.submit "Create Category" %>
-        </div>
+          <div>
+            <%= f.submit "Create Category" %>
+          </div>
 
-      <% end %>
+        <% end %>
+    </div>
+    <div class="back-cover">
       <%= link_to '/', :remote => true do %>
         <input type="button" value="Back">
       <% end %> 

@@ -16,22 +16,25 @@
 
     <h1>Add New Transaction</h1>
 
-<%= form_with model: @entity do |f| %>
+<%= form_with class: "new_user", model: @entity do |f| %>
 
-  <div>
+  <div class="field">
       <%= f.label :name %>
-      <%= f.text_field :name, required: true %>
+      <br />
+      <%= f.text_field :name, class: "input", required: true %>
   </div>
 
-  <div>
+  <div class="field">
       <%= f.label :amount %>
-      <%= f.number_field :amount, min: 1, required: true %>
+      <br />
+      <%= f.number_field :amount, class: "input", min: 1, required: true %>
   </div>
 
-      <div>
+      <div class="field">
       <%= f.fields_for(@relation) do |r| %>
       <%= r.label :group%>
-      <%= r.select :group_id, current_user.groups.collect { |group| [group.name, group.id]}, {include_blank: true}, required: true %>
+      <br />
+      <%= r.select :group_id, current_user.groups.collect { |group| [group.name, group.id]}, {include_blank: true}, class: "input",required: true %>
      <% end %>   
     </div>
 

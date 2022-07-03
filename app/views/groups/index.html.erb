@@ -3,7 +3,7 @@
 <section>
     <%@groups.each do |group|%>
       <div class = "body-flex">
-        <div>
+        <div class="img-cover align-self">
           <img src=<%=group.icon%> alt="icon">
         </div>
         <div class="name-cover">
@@ -14,7 +14,7 @@
         <div>
           <h3 class="group-cover">$<%=Group.total(group.id)%>.00</h3> 
         </div>
-        <div>
+        <div class="align-self">
           <p class="group-cover"><%=group.created_at%></p>
         </div>
         <div class="button-cover">
